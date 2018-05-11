@@ -3,6 +3,8 @@
 }
 div.container{
 	width: 70vw;
+	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 }
 h1{
@@ -31,7 +33,12 @@ a.a-nav:hover{
 }
 .border-input{
 	border: 1px solid #b3b3b3;
-	box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(234,0,94 ,1);
+	box-shadow: 0 .9px .9px rgba(229, 103, 23, 0.075)inset, 0 0 3px rgba(234,0,94 ,1);
+	padding: 3px;
+	font-family:Tahoma;
+}
+.border-input:focus{
+	outline-color: #e6007e;
 }
 header{
 	display: flex;
@@ -39,7 +46,7 @@ header{
 	margin: 30px auto 0 auto;
 	flex-direction: column;
 	border-bottom: 1px solid #b3b3b3;
-	/*box-shadow: 0px 3px 3px 0px rgba(122,121,122,1);*/
+	/* box-shadow: 0px 3px 3px 0px rgba(122,121,122,1); */
 }
 header div.header{
 	display: flex;
@@ -51,4 +58,7 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
+}
+.icono-search-header{
+	padding:3px;
 }
