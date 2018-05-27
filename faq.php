@@ -1,3 +1,7 @@
+<?php
+
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,27 +17,9 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="header">
-          <h1>Baires Things</h1>
-          <form action="" method="post">
-            <input class="border-input" type="text" name="busqueda" size="50">
-            <label for="busqueda"><i class="fas fa-search icono-search-header"></i></label>
-          </form>
-        </div>
-        <nav>
-          <div class="nav">
-            <a href="index.html" class="a-nav">inicio</a>
-            <a href="" class="a-nav">productos</a>
-            <a href="faq.html" class="a-nav">FAQ</a>
-          </div>
-          <div class="login">
-            <a href="crearCuenta.html" class="a-nav">log in</a>
-            <a href="iniciarSesion.html" class="a-nav">sing in</a>
-            <a href="" class="a-nav"><i class="fas fa-shopping-cart hover"></i></a>
-          </div>
-        </nav>
-      </header>
+      <?php
+  			include_once('header.php');
+  		?>
 
 
           <h6 class="tituloPagina"> Preguntas Frecuentes </h6>
@@ -139,8 +125,9 @@
                     </p>
                   </div>
               </div>
-
-
+              <?php
+                include_once('header.php');
+              ?>
           </section>
       </div>
   </body>

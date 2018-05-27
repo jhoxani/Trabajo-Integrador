@@ -1,3 +1,7 @@
+<?php
+
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,22 +17,9 @@
   <body>
 
     <div class="container">
-      <header>
-        <div class="header">
-          <h1 class="text-no-margin">Baires Things</h1>
-        </div>
-        <nav>
-          <div class="nav">
-            <a href="index.html" class="a-nav">inicio</a>
-            <a href="faq.html" class="a-nav">faq</a>
-            <a href="" class="a-nav">productos</a>
-          </div>
-          <div class="login">
-            <a href="crearCuenta.html" class="a-nav">log in</a>
-            <a href="iniciarSesion.html" class="a-nav">sing in</a>
-          </div>
-        </nav>
-      </header>
+      <?php
+        include_once('header.php');
+      ?>
     </div>
     <div class="form-container">
       <h1>Iniciar Sesion</h1>
@@ -39,7 +30,9 @@
       </form>
     </div>
 
-    <!-- PONER FOOTER -->
+    <?php
+			include_once('header.php');
+		?>
 
   </body>
 </html>

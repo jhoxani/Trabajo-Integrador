@@ -57,6 +57,7 @@ header{
 h1{
   margin-bottom: 20px;
   font-weight: 300;
+  text-align: center;
 }
 .flex-row-form{
   flex-direction: row;
@@ -87,13 +88,3 @@ header div.header{
 	align-items: flex-end;
   margin-bottom: 3px;
 }
-
-
-
-
-
-
-
-
-
-
