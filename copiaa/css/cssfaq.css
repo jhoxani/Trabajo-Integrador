@@ -1,0 +1,50 @@
+.pregunta{
+  background-color: #e8e2e7;
+  border-radius: 2px;
+  padding: 10px;
+}
+  .pregunta:hover{
+  	color: rgba(76,74,72 ,1);
+
+
+}
+
+.respuesta{
+  margin: 10px;
+}
+
+h6 {
+  font-size: 40px;
+  color: #e6007e;
+  font-family: 'Lobster Two', cursive;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+h3{
+  font-size: 25px;
+  color:#5f6268;
+  font-family: 'Lobster Two', cursive;
+  align-items: center;
+
+}
+
+p {
+  font-family:Century Gothic;
+  font-size:14px;
+  color:#595959;
+  font-weight:400;
+  padding:5px 10px;
+
+
+}
+
+ul{
+  font-family:Century Gothic;
+  font-size:14px;
+  color:#595959;
+   padding:5px 10px;
+}

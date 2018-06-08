@@ -1,0 +1,24 @@
+@media only screen and (max-width: 1400px){
+    header dev.header{
+        align-items: center;
+    }
+    .form-container{
+        width: 70%;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 705px){
+    header div.header{
+        align-items: center;
+    }
+    .form-container{
+        width: 90%;
+    }
+    h1{
+        text-align: center;
+    }
+}
