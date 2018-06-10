@@ -1,38 +1,69 @@
 <?php
-
+require_once('global.php');
+$pageTitle = 'Iniciar Sesion';
+$css= '<link rel="stylesheet" href="css/estlilosForms.css" />';
  ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta chatset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-	  <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Signika" rel="stylesheet">
-    <link rel="stylesheet" href="css/css.css" />
-    <link rel="stylesheet" href="css/estlilosForms.css" />
-    <link rel="stylesheet" href="css/mediaQueriesForms.css" />
-    <title>Iniciar Sesion</title>
-  </head>
-  <body>
+<?php
 
-    <div class="container">
-      <?php
-        include_once('header.php');
-      ?>
-    </div>
+require_once('funciones/validaciones.php');
+ require_once('funciones/auth.php');
+
+$errores = [];
+
+if ($_POST) {
+
+    $errores = validarLogin($_POST);
+
+    if (!$errores) {
+
+        $errores = loguear($_POST);
+
+        if (!$errores) {
+            header('location: bienvenido.php');
+            exit;
+        }
+    }
+
+}
+
+?>
+
+
+    <?php
+        include_once('componentes/header.php');
+    ?>
+
     <div class="form-container">
+
+      <div class="row">
+          <?php
+            if ($errores) {
+          ?>
+              <div class="alert">
+                  <div><strong>Error!</strong></div>
+                  <ul>
+                      <?php
+                      foreach($errores as $error) {
+                      ?>
+                          <li><?php echo $error ?></li>
+                      <?php } ?>
+                  </ul>
+              </div>
+          <?php } ?>
+
       <h1>Iniciar Sesion</h1>
-      <form>
-        <input type="text" placeholder="Nombre de usuario o Email" />
-        <input type="password" placeholder="Contrasena" />
-        <button type="button">Iniciar Sesion</button>
+      <form action="" method="post">
+        <label for="email"></label>
+        <input type="text" class="form-control" id="email" name="email" value="<?php echo ($_POST['email'] ?? '') ?>" placeholder="Ingrese Email">
+        <label for="contrasena"></label>
+        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingrese Contraseña">
+        <button type="submit">Iniciar Sesion</button>
       </form>
     </div>
 
     <?php
-			include_once('header.php');
+			include_once('componentes/header.php');
 		?>
-
   </body>
 </html>

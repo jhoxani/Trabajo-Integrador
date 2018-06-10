@@ -1,24 +1,12 @@
 <?php
-
+require_once('global.php');
+$pageTitle = 'FAQ';
+$css= '<link href="css/estilosFAQ.css" rel="stylesheet">'
  ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Preguntas Frecuentes</title>
-    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/css.css">
-    <link href="css/estilosFAQ.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Signika" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-  <body>
-    <div class="container">
       <?php
-  			include_once('header.php');
+  			include_once('componentes/header.php');
   		?>
 
 
@@ -126,7 +114,7 @@
                   </div>
               </div>
               <?php
-                include_once('header.php');
+                include_once('componentes/header.php');
               ?>
           </section>
       </div>
